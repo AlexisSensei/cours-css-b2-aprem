@@ -1,17 +1,42 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 section {
-    height: 200px;
-    width: 600px;
-    padding: 70px;
-    border: 2px solid #000;
-    background-color: aqua;
-    margin-bottom: 10px;
+    display: flex;    
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    background-color: antiquewhite;
+    height: 800px;
+    flex-direction: column;
 }
 
-.box {
-  box-sizing: border-box;  
+@media screen and (min-width: 1000px) {
+    section {
+        flex-direction: row;
+    }
+}
+
+div {
+    width: 300px;
+    height: 200px;
+    background: brown;
+    border: 2px solid forestgreen;
+}
+
+.box1 {
+    height: 200px;
+}
+
+.box2 {
+    height: 100px;
+}
+
+.box3 {
+    height: 300px;
 }
