@@ -2,37 +2,87 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 50px;
+    font-size: 20px;
     font-family: sans-serif;
 }
 
-section {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "img     title   aside"
-                         "article article aside";
-}
-
 img {
-    width: 100%;
-    display: block;
-    grid-area: img;
-}
-
-div {
-    background-color: cadetblue;
+    width: 300px;
     height: 300px;
-    grid-area: title;
+    object-fit: cover;
+    border-radius: 150px;
+    border: 12px solid #b6b6b6;
+    position: relative;
+    z-index: 1;
 }
 
-article {
-    background-color: crimson;
-    height: 100vh;
-    grid-area: article;
+img + img {
+    position: relative;
+    right: 150px;
+    z-index: 0;
 }
 
-aside {
-    background-color: chocolate;
-    height: calc(100vh + 300px);
-    grid-area: aside;
+.section1 {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: darksalmon;
+}
+
+.section1 > div {
+    width: 40%;
+    margin: 40px;
+}
+
+.sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.section2 {
+    position: relative;
+    height: 600px;
+    background-color: dodgerblue;
+}
+
+.cube {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+}
+
+.promo {
+    position: relative;
+    margin: 100px;
+    width: 400px;
+    padding: 20px 40px;
+    font-size: 16px;
+    border: 2px solid goldenrod;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo::before {
+    content: "En promo !";
+    background-color: goldenrod;
+    position: absolute;
+    padding: 8px;
+    right: -2px;
+    top: -33px;
+}
+
+
+nav {
+    position: sticky;
+    z-index: 12;
+    background-color: white;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
